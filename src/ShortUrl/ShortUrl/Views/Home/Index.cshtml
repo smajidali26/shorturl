@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "" }))
+    {
+         <div class="container">
+             <div class="col-12">
+                 <label>Enter Url To Convert Short Url</label>
+                 <input id="url" name="url" type="text" style="width:60%" />
+                 <button type="submit" value="Generate Url">Generate</button>
+             </div>
+         </div>
+        @if (TempData["ShortUrl"] != null)
+        {
+            <label>Your Short Url: @TempData["ShortUrl"]</label><br />
+            <label>Copy this url in another tab or browser to go actual url</label>
+        }
+    }
+</div>
