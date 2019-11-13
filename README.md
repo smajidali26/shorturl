@@ -8,6 +8,8 @@ Open new query window for ShortUrl database
 
 Execute following script to create table
 
+#Script
+
 GO
 
 CREATE TABLE [dbo].[UrlEntity](
@@ -27,6 +29,8 @@ GO
 ALTER TABLE [dbo].[UrlEntity] ADD  CONSTRAINT [DF_UrlEntity_DateCreated]  DEFAULT (getdate()) FOR [DateCreated]
 GO
 
+#Script
+
 #Change DB Path in Code
 
 Open Code in VS 2019
@@ -36,3 +40,6 @@ Go to ShortUrl website and open appsettings.json file
 Update "ShortUrl": "Server=.;Database=ShortUrl;Integrated Security=true;"  with your DB server name.
 
 Run Application and It will take you to {Host}/Home/Index page
+
+#Live Application
+Live Application is running on following URL https://shorturltest.azurewebsites.net/Home/Index
